@@ -1,0 +1,122 @@
+---
+title: "Bot Installation FAQs"
+description: "This section contains the FAQs related to the installation of various type of bot"
+---
+
+<AccordionGroup>
+  <Accordion title="How to install website bot using javascript">
+    Copy the Javascript code from the  Convertalk app & Go to
+
+    1. our website's HTML code.
+    2. Paste the script in the head or body tag of your HTML code
+
+    **Please Note**
+
+    1. Ensure that you paste the script before the tag is closed, i.e., paste the script before `</head>` or `</body>`.
+    2. Make sure  Convertalk should be the last script to execute, as some scripts may override the  Convertalk script.
+  </Accordion>
+  <Accordion title="How to install a bot on wordpress website">
+    After you have logged into your  Convertalk account, Go to the Bots Tab, select the desired Bot, and navigate to the Install section.
+
+    1. Move to the WordPress section and copy the API key available there.
+    2. Open your website's wp-admin, adding "/wp-admin" at the end of your Domain URL. E.g., If your website URL is "[www.expample.com](http://www.expample.com)," then you can open WP-Admin using the Link "[www.example.com/wp-admin](http://www.example.com/wp-admin)"
+    3. Go to Plugins \> Add new \> Search  Convertalk \> Install now \> Activate plugin"
+    4. Install the " Convertalk" Plugin and then activate the same.
+    5. Upon activating the Plugin, you will be redirected to the plugins page with the confirmation message "Plugin Activated."
+    6. Once your Plugin is activated, paste the Bot Penguin API key in the Box named " Convertalk Snippet" that you Copied from your  Convertalk account.
+    7. Save the Settings, and you are all set.  Convertalk has been integrated into your website.
+  </Accordion>
+  <Accordion title="Bot is not showing up upon activation of wp-rocket plugin">
+    If you have both wp-rocket and  Convertalk Plugin/Script added to your WordPress site, You may face the issue of the  Convertalk not showing up on the website.
+
+    In case you are facing such issues, try the below steps, and it will solve the problem.
+
+    1. Login to your wp-admin panel and open the `wp-rocket` settings.
+    2. Go to the `File Optimization` →  `JavaScript Files` -\> `Load JavaScript deferred`
+    3. Add the ` Convertalk` bot script here under `Exclude Java Script Files` option, and done\!
+
+    For more details, Check out the following documentation by `wp-rocket`
+
+    https://docs.wp-rocket.me/article/976-exclude-files-from-defer-js
+  </Accordion>
+  <Accordion title="What is the minimum browser version requirement for the  Convertalk website bot">
+     Convertalk is a JS-based software. Hence your browser must support the Java Script. The minimum requirement for some renowned browsers are as follows:
+
+    - Google Chrome: Version 51 or above
+    - Edge: Version 14 or above
+    - Safari: Version 10 or above
+    - Firefox: Version 52 or above
+  </Accordion>
+  <Accordion title="How to resolve latency issues on my website when I have the chatbot installed">
+    We understand the criticality of website speed and responsiveness. Adding a trigger delay only delays the chatbot from opening, but the script of the chatbot is loaded at the same time as the page, which can delay the overall page loading and create latency issues. This happens because of the vast processes that allow chatbots to run smoothly. However, this problem can be solved.
+
+    In the document ready function, create a timeout function of 3sec. In that timeout function, create a script element with the details of the script shared while installing the chatbot.
+
+    ```
+    <script>
+        const scriptEle = document.createElement("script");
+        scriptEle.src = ('src', 'https://cdn. Convertalk.com/ Convertalk.js');
+        scriptEle.setAttribute('id', ' Convertalk-messenger-widget');
+        scriptEle.innerHTML = '[Your Bot ID]';
+    
+        document.onreadystatechange = function () {
+          if (document.readyState == "complete") {
+            setTimeout(() => {
+              document.body.appendChild(scriptEle);
+            }, 3000);
+          }
+        }
+      </script>
+    ```
+
+    \*\*Please note: \*\*Do not forget to replace `[Your Bot ID]` with you bot ID that you can find in your script.
+
+    <img
+      src="/images/how-botpenguin-works/bot-installation-faq/204.bot_installation_faqs__Convertalk_resource_centre-1.png"
+      alt="204 Bot Installation Faqs  Convertalk Resource Centre 1 Pn"
+      title="204 Bot Installation Faqs  Convertalk Resource Centre 1 Pn"
+      style={{ width:"77%" }}
+    />
+
+    And done, All sorted.
+  </Accordion>
+  <Accordion title="Where are the channels where I can install my bot">
+    As of now (13/12/23), We have the following channels where you can run your bot to
+
+    1. Website
+    2. Whatsapp
+    3. Facebook
+    4. Telegram
+    5. Standalone landing page
+
+    Also, **Instagram is coming soon\!**
+  </Accordion>
+  <Accordion title="Why my bot is not showing up upon activation of wp-rocket plugin">
+    If you have both wp-rocket and  Convertalk Plugin/Script added to your WordPress site, You may face the issue of the  Convertalk not showing up on the website.
+
+    In case you are facing such issues, try the below steps, and it will solve the problem.
+
+    1. Login to your wp-admin panel and open the `wp-rocket` settings.
+    2. Go to the `File Optimization` →  `JavaScript Files` -\> `Load JavaScript deferred`
+    3. Add the ` Convertalk` bot script here under `Exclude Java Script Files` option, and done\!
+
+    Also you can add this provided code snippet :
+
+    ```
+    <script>
+      const scriptEle = document.createElement("script");
+      scriptEle.src = ('src', 'https://cdn. Convertalk.com/ Convertalk.js');
+      scriptEle.setAttribute('id', ' Convertalk-messenger-widget');
+      scriptEle.innerHTML = '6ffd62fkb3013e15bc12ba60,6ffd62fkb3013e15bc12ba60'; // Replace with your chatbot IDs
+    
+      document.onreadystatechange = function () {
+        if (document.readyState == "complete") {
+          setTimeout(function() {
+            document.body.appendChild(scriptEle);
+          }, 10);
+        }
+      }
+    </script>
+    ```
+  </Accordion>
+</AccordionGroup>

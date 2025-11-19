@@ -1,0 +1,133 @@
+---
+title: "Chatbot User Authentication"
+description: "This page contains all the necessary information regrading how you can authenticate users which are coming to your chatbot."
+---
+
+### **Phone Number Authentication Setup**
+
+This guide walks you through integrating an API for phone number verification within your flow. You’ll set up two APIs—one to send the OTP and another to verify it. Follow these steps carefully.
+
+**Step 1: Create the API for Sending OTP**
+
+1. **Navigate to Developer Section**
+
+Go to your platform's **Developer Section**.
+
+![240 Chatbot User Authentication  Convertalk Resource C 1 Pn](/images/platform-guidelines-training/chatbot-user-authentication/240.chatbot_user_authentication__Convertalk_resource_c-1.png)
+
+2. **Add a New API**
+
+Click on the **Add API** button as shown in the screenshot
+
+![240 Chatbot User Authentication  Convertalk Resource C 2 Pn](/images/platform-guidelines-training/chatbot-user-authentication/240.chatbot_user_authentication__Convertalk_resource_c-2.png)
+
+3. Enter an **API Name** (e.g., "Send OTP").
+
+   ![240 Chatbot User Authentication  Convertalk Resource C 3 Pn](/images/platform-guidelines-training/chatbot-user-authentication/240.chatbot_user_authentication__Convertalk_resource_c-3.png)
+4. **Configure API Details**
+   - Choose the appropriate **Method** from the dropdown that is POST
+
+     ![240 Chatbot User Authentication  Convertalk Resource C 5 Pn](/images/platform-guidelines-training/chatbot-user-authentication/240.chatbot_user_authentication__Convertalk_resource_c-4.png)
+   - In the **API URL** field, enter the API endpoint provided for sending OTP.
+
+   <Info>
+     API : https://api.v7. Convertalk.com/integrations/custom-feature/send-otp-sms
+   </Info>
+5. **Set Headers**
+   - Go to the **Headers** section.
+   - Add the required authorization fields:
+     - **Authorization Key**: Enter the authorization key provided by the service.
+     - **Value**: Your token or key.
+
+     ![240 Chatbot User Authentication  Convertalk Resource C 5 Pn](/images/platform-guidelines-training/chatbot-user-authentication/240.chatbot_user_authentication__Convertalk_resource_c-5.png)
+6. **Define Request Body Parameters**
+
+- In the **Body** section, enter the parameters as shown in the screenshot:
+  - **accountSID**: Obtain from Twilio.
+  - **authToken**: Obtain from Twilio.
+  - **fromNumber**: Your Twilio phone number.
+  - **toNumber**: Map this to the user’s phone number attribute.
+
+  ![240 Chatbot User Authentication  Convertalk Resource C 6 Pn](/images/platform-guidelines-training/chatbot-user-authentication/240.chatbot_user_authentication__Convertalk_resource_c-6.png)
+
+7. **Save API**
+   - Click **Save** to store the API configuration.
+
+   ![240 Chatbot User Authentication  Convertalk Resource C 6 Pn](/images/platform-guidelines-training/chatbot-user-authentication/240.chatbot_user_authentication__Convertalk_resource_c-7.png)
+8. **Map Phone Number Attribute**
+   - In the **Attributes** section, select the user’s phone number attribute.
+     1. **Save Custom Attribute**
+     - In the **Manage API Response** section, choose **Save to Custom Attribute**.
+
+       ![240 Chatbot User Authentication  Convertalk Resource C 8 Pn](/images/platform-guidelines-training/chatbot-user-authentication/240.chatbot_user_authentication__Convertalk_resource_c-8.png)
+     - If not already created, create a custom attribute to store the verification status or OTP code.
+
+**Step 2: Create the API for OTP Verification**
+
+1. **Add Another API for OTP Verification**
+   - Click **Add API** again.
+   - Name this API (e.g., "Verify OTP").
+
+     ![240 Chatbot User Authentication  Convertalk Resource C 9 Pn](/images/platform-guidelines-training/chatbot-user-authentication/240.chatbot_user_authentication__Convertalk_resource_c-9.png)
+2. **Set Method and URL**
+   - Choose the appropriate **Method** (POST).
+   - Enter the **API URL** for verifying OTP.
+
+     ![240 Chatbot User Authentication  Convertalk Resource C 10 Pn](/images/platform-guidelines-training/chatbot-user-authentication/240.chatbot_user_authentication__Convertalk_resource_c-10.png)
+
+     <Info>
+       API : https://api.v7. Convertalk.com/integrations/custom-feature/verify-user-otp
+     </Info>
+3. **Set Headers**
+   - Fill in the  header details similar to Step 1.
+
+     ![240 Chatbot User Authentication  Convertalk Resource C 11 Pn](/images/platform-guidelines-training/chatbot-user-authentication/240.chatbot_user_authentication__Convertalk_resource_c-11.png)
+4. **Define Request Body Parameters**
+   - In the **Body** section, pass:
+     - **systemOtp**: The OTP sent to the user.
+     - **userOtp**: The OTP entered by the user.
+
+     ![240 Chatbot User Authentication  Convertalk Resource C 12 Pn](/images/platform-guidelines-training/chatbot-user-authentication/240.chatbot_user_authentication__Convertalk_resource_c-12.png)
+5. **Save API**
+   - Click **Save**.
+
+     ![240 Chatbot User Authentication  Convertalk Resource C 13 Pn](/images/platform-guidelines-training/chatbot-user-authentication/240.chatbot_user_authentication__Convertalk_resource_c-13.png)
+
+### **Step 3: Integrate APIs into the Chat Flow**
+
+1. **Edit the Chat Flow**
+   - Go to **Edit Flow** and open the chat flow you want to edit.
+
+     ![240 Chatbot User Authentication  Convertalk Resource C 14 Pn](/images/platform-guidelines-training/chatbot-user-authentication/240.chatbot_user_authentication__Convertalk_resource_c-14.png)
+2. **Add API Components**
+
+- **Send OTP** API:
+  - Add the **API component** and select the  API created in Step 1.
+
+  ![240 Chatbot User Authentication  Convertalk Resource C 15 Pn](/images/platform-guidelines-training/chatbot-user-authentication/240.chatbot_user_authentication__Convertalk_resource_c-15.png)
+
+**Phone Number Input**:
+
+- Add a component to capture the user’s phone number.
+
+  ![240 Chatbot User Authentication  Convertalk Resource C 16 Pn](/images/platform-guidelines-training/chatbot-user-authentication/240.chatbot_user_authentication__Convertalk_resource_c-16.png)
+
+**Verify OTP** API:
+
+- Add the **API component** again and select the **Verify OTP** API from Step 2.
+
+  ![240 Chatbot User Authentication  Convertalk Resource C 16 Pn](/images/platform-guidelines-training/chatbot-user-authentication/240.chatbot_user_authentication__Convertalk_resource_c-17.png)
+
+3. **Add Delays**
+
+- Add a delay of 5 seconds between sending and verifying OTP, and 2 seconds if re-verifying.
+
+  ![240 Chatbot User Authentication  Convertalk Resource C 17 Pn](/images/platform-guidelines-training/chatbot-user-authentication/240.chatbot_user_authentication__Convertalk_resource_c-18.png)
+
+  ![240 Chatbot User Authentication  Convertalk Resource C 19 Pn](/images/platform-guidelines-training/chatbot-user-authentication/240.chatbot_user_authentication__Convertalk_resource_c-19.png)
+  5. **Response Messages**
+
+
+- Configure messages to display whether the OTP was verified successfully or if the user should re-enter it.
+
+This setup enables you to authenticate a user’s phone number seamlessly by sending and verifying an OTP.

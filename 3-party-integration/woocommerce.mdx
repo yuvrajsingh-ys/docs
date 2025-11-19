@@ -1,0 +1,93 @@
+---
+title: "Integrate  Convertalk with WooCommerce"
+description: "This page contains the stepwise tutorial for WooCommerce Integration with  Convertalk."
+---
+
+### **Prerequisites:**
+
+The following prerequisites need to be met when you are integrating WooCommerce with WhatsApp bot.
+
+- Having a WhatsApp Chatbot
+- Having a WooCommerce Web Store
+
+### **Step 1 of 4: Login to your  Convertalk Account and Select Application to Integrate:**
+
+1. Login to your  Convertalk account. Now, select and click the WhatsApp chatbot you want to integrate with WooCommerce. Click on the “**Third-party Apps Integration”.**
+2. \
+   Go to WooCommerce integration either by:
+   - Searching for WooCommerce on the search bar available, or
+   - Scrolling down to WooCommerce.
+3. \
+   As shown below, a page requiring for the input of your WooCommerce Shop URL, and the WooCommerce API Plugin Key.
+
+### **Step 2.1 of 4: Find your Webhooks Settings in WooCommerce Account**
+
+Once you are logged into your WooCommerce account, follow the steps below:
+
+1. Go to Settings → Advanced → Webhooks.
+2. Click on add a webhook → Select event → order created / order updated / order deleted
+3. Add API URL: “https://api.v7. Convertalk.com/whatsapp/woo-commerce/{{phoneNumberId}}”
+
+   <Info>
+     The API URL is the same as the Delivery URL
+   </Info>
+
+<Info>
+  You need to create a separate webhook for every information you want your chatbot to fetch. For example, for orders created, orders updated, and orders deleted, there are three separate webhooks. If you want to configure all of them, you should add the same in woo-commerce. In  Convertalk, you can have separate configurations for orders updated with different statuses and one for orders created and orders deleted.
+</Info>
+
+### **Step 2.2 of 4: Find your Phone Number ID in  Convertalk**
+
+1. Go to your desired WhatsApp chatbot
+2. Click on Bot Settings
+3. Click on WhatsApp Profile
+4. Find the phone number ID field, and copy and paste it inside the WooCommerce webhook settings.
+
+### **Step 3 of 4: Edit the integration configurations in  Convertalk**
+
+A variety of actions are available for automation of messages after going to the “**Automated Messages**” tab, such as:
+
+1. **Abandoned Recovery Message**
+
+Customers often leave items in their carts without completing a purchase. This feature allows you to send **automated follow-up messages** to encourage them to return and complete their orders.
+
+This is done through the manual toggling of the button, following which user is prompted select a template of the message that needs to be sent. If some variables are included in the template, the input of those values are also necessary, along with fallback values, and additional header media(additional image, video, or document that can be attached to the message for better engagement.)
+
+2. **\
+   Order Completed**
+
+Once a customer successfully places an order, this feature sends an **order confirmation message** instantly. It reassures the customer that their purchase has been processed.
+
+This is done through the manual toggling of the button, following which user is prompted select a template of the message that needs to be sent. If some variables are included in the template, the input of those values are also necessary, along with fallback values, and additional header media(additional image, video, or document)
+
+3. **Order Fulfillment**
+
+When an order is shipped,  Convertalk can automatically notify customers with a **shipment confirmation message**.
+
+This is done through the manual toggling of the button, following which user is prompted select a template of the message that needs to be sent. If some variables are included in the template, the input of those values are also necessary, along with fallback values, and additional header media(additional image, video, or document)
+
+4. **\
+   Return/Exchange Request**
+
+Managing return or exchange requests manually can be time-consuming. This feature sends an **automated acknowledgment message** when a customer requests a refund or exchange.
+
+This is done through the manual toggling of the button, following which user is prompted select a template of the message that needs to be sent. If some variables are included in the template, the input of those values are also necessary, along with fallback values, and additional header media.
+
+**5. Cart Template Message**
+
+For customers who place orders directly from a product catalog, this feature sends an instant confirmation message. It helps in verifying bulk orders and catalog-based purchases, ensuring that the customer receives a summary of their selected products before checkout.
+
+For the correct implementation of this feature, the given code snippet must be pasted in your website's footer or header before the closing \</body\> tag. Additionally, the content of the message can be selected through template‘s in the “**Select Template**” section. If some variables are included in the template, the input of those values are also necessary, along with fallback values, and additional header media.
+
+### **Step 4 of 4: Test your Integration Setup with Data:**
+
+Once you have established a connection between ** Convertalk** and **the WooCommerce website, you are ready** for your first test lead. You can test your integration setup by creating a dummy lead on the bot. This lead should appear in your  Convertalk dashboard as well as in the WhatsApp chatbot sent messages.
+
+#### **Still Not Working, Let’s Troubleshoot\!**
+
+If you are not getting dummy lead, it may be due to the multiple reasons:
+
+- Wrong Authorization Details added- You will be required to check and see if all the authorization credentials such as API Token, API key, and/or URL has been entered correctly.
+- Free plan- You are not subscribed to the paid plan on  Convertalk as integration works only in paid plan.
+
+ 

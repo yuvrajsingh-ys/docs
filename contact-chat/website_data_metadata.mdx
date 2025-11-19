@@ -1,0 +1,213 @@
+---
+title: "Website Contacts & Meta Data"
+description: "This section contains the Leads and Chat API references"
+---
+
+## **Get the essentials first\!**
+
+To use the  Convertalk APIs, You need to insure that you have following details with you.
+
+A. **UUID** - You can get the UUID from the local web session storage as show in the image below:
+
+![251 Website Contacts Meta Data  Convertalk Resource C 1 Pn](/images/api-references/website-contact-metadata/251.website_contacts__meta_data__Convertalk_resource_c-1.png)
+
+B. **Bot ID & User ID:** One can get the Bot ID and User ID from your Bot Script or Bot page URL. Below is the sample Example.
+
+For Chatbot page URL
+
+```
+// Chatbot Page URL Structure
+
+https://page. Convertalk.com/BotId/CustomerId
+
+// The first value after .com is the BotId and second value is the CustomerId.
+```
+
+For Chatbot Script
+
+```html
+// Chatbot Script Structure
+
+<script id=" Convertalk-messenger-widget" src="https://cdn. Convertalk.com/ Convertalk.js" defer>BotId,CustomerId</script>
+
+// The first value after defer> is the BotId & second value is the CustomerId.
+```
+
+C. **Auth Token:** We haven't automated everything yet. Please contact our support team to get the same.
+
+Now you are ready to run the POC
+
+## **API References**
+
+Please use the below APIs in order to play with your leads and chat data.
+
+### **Create a lead in the  Convertalk**
+
+As soon as any user opens up the Bot, It creates one UUId; pass the same along with the other required details to create and update the lead's details.
+
+## **API to update a chat/lead data**
+
+`PUT` `https://api.v7. Convertalk.com/inbox/direct/lead`
+
+As soon as any user opens up the Bot, It creates one UUId; pass the same along with the other required details to create and update the lead's details.
+
+#### **Headers**
+
+| **Name**     | **Type** | **Description** |
+| ------------ | -------- | --------------- |
+| x-bp-token\* | String   | API Token       |
+
+#### **Request Body**
+
+| **Name**     | **Type**     | **Description**                                                                                               |
+| ------------ | ------------ | ------------------------------------------------------------------------------------------------------------- |
+| uuid\*       | <br />String | Unique ID of a chat user                                                                                      |
+| botId\*      | <br />String | Unique ID of the bot                                                                                          |
+| customerId\* | <br />String | Unique ID of the customer account                                                                             |
+| agentId      | <br />String | <br />Unique ID of the agent assigned                                                                         |
+| name         | <br />String | Name of the lead                                                                                              |
+| email        | <br />String | <br />Email of the lead                                                                                       |
+| phone        | <br />String | Phone number of the lead                                                                                      |
+| dialCode     | <br />String | Dial Code including "\+" sign                                                                                 |
+| notes        | <br />String | <br />Additional notes for the chat                                                                           |
+| status       | <br />String | Valid status for the chat. Available values: 'OPEN', 'INPROGRESS', 'REVIEW', 'ONHOLD', 'DEPENDANCY', 'CLOSED' |
+| picture      | <br />String | <br />A valid image HTTP URL                                                                                  |
+| tags         | <br />String | Additional tags for the chat                                                                                  |
+| attributes   | <br />String | Custom attributes for the chat                                                                                |
+
+<CodeGroup>
+
+```
+200: OK API successfully processed
+{
+    "success": true,
+    "message": "ok",
+    "code": 200
+}
+```
+
+
+```
+400: Bad Request Bad request/parameters
+{
+    // Response
+}
+```
+
+
+```
+401: Unauthorized Unauthorized request
+{
+    // Response
+}
+```
+
+</CodeGroup>
+
+### **Get leads listing and Its meta data**
+
+To get the listing of the leads and its meta data, Hit the below API with mandatory details.
+
+## **API to get listing of chats/leads**
+
+`GET` `https://api.v7. Convertalk.com/inbox/direct/chats`
+
+To get the listing of the leads and its meta data, Hit the below API with mandatory details.
+
+#### **Query Parameters**
+
+| **Name**     | **Type** | **Description**                                                |
+| ------------ | -------- | -------------------------------------------------------------- |
+| botId\*      | String   | Unique ID of the bot                                           |
+| customerId\* | String   | Unique ID of the customer account                              |
+| page\*       | String   | Page number                                                    |
+| type\*       | String   | "lead" to fetch only leads  "non-lead" to fetch non lead chats |
+
+**Headers**
+
+| **Name**      | **Type** | **Description** |
+| ------------- | -------- | --------------- |
+| x-bot-token\* | String   | API Token       |
+
+<CodeGroup>
+
+```
+200: OK API successfully processed
+{
+    "success": true,
+    "message": "ok",
+    "data": [
+        {
+            "_id": "63d9ffa77a8d152facbe2f2f",
+            "uuid": "7e88d192-9b20-4035-9b68-d4ac3d58a34f",
+            "createdAt": "2023-02-01T05:59:03.533Z",
+            "isOnline": false,
+            "lastMessage": {
+                "at": "2023-02-01T06:00:20.000Z",
+                "by": "bot",
+                "text": "Welcome to  Convertalk. I am here to help you."
+            },
+            "lastSeenAt": "2023-02-01T06:00:21.000Z",
+            "profile": {
+                "notes": [
+                    {
+                        "title": "Sample title",
+                        "description": "Sample description",
+                        "_id": "63db5c4abcbc3be2e95b20ae"
+                    }
+                ],
+                "userDetails": {
+                    "name": "Sample name",
+                    "picture": "my-picture",
+                    "contact": {
+                        "email": "Sample email",
+                        "phone": {
+                            "number": "Sample number",
+                            "prefix": "91"
+                        }
+                    },
+                    "city": "Sample city",
+                    "country": "Sample country",
+                    "gender": "MALE",
+                    "tags": [
+                        "Sample tag"
+                    ],
+                    "attributes": [
+                        {
+                            "key": "ID",
+                            "value": "BP001"
+                        }
+                    ]
+                }
+            },
+            "status": "INPROGRESS",
+            "updatedAt": "2023-02-02T06:46:34.119Z",
+            "websiteVisits": 1,
+            "_agentAssigned": "631aa793bcfa100487d13d0d"
+        }
+    ],
+    "code": 200
+}
+```
+
+
+```
+400: Bad Request Bad Requests/Parameters
+{
+    // Response
+}
+```
+
+
+```
+401: Unauthorized Unauthorized request
+{
+    // Response
+}
+```
+
+</CodeGroup>
+
+### **❓ Got any questions?**
+
+If you have any questions, you can look into our repository of FAQs, most likely, you will find your answer here, If not, write us at [support@ Convertalk.com](mailto:support@ Convertalk.com).

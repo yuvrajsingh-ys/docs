@@ -1,0 +1,91 @@
+---
+title: "Get All Contacts"
+description: "This page contains the API documentation for the getting all contacts of platform."
+---
+
+## **Get User Inbox**
+
+This API endpoint allows you to retrieve user data from the inbox. It provides various filtering options to customize the query.
+
+**Endpoint URL:** `https://api.v7. Convertalk.com/inbox/users`
+
+**HTTP Method:** POST
+
+#### **Request Headers**
+
+- `Authorization`: A bearer token is required for authentication. Replace `[MASKED_TOKEN]` with your valid API token. This token is used to authenticate and authorize the request.
+
+#### **Request Body**
+
+The request body should be a JSON object containing various filtering criteria to customize the query. Here's a breakdown of the request body fields:
+
+- `searchText` (string): Search text to filter users.
+- `tags` (array): An array of tags to filter users.
+- `status` (array): An array of status values to filter users.
+- `isOnline` (boolean): Indicates whether users are online.
+- `_botWebsite` (array): Filter users based on interactions on the website.
+- `_botWhatsapp` (array): Filter users based on interactions on WhatsApp.
+- `_botTelegram` (array): Filter users based on interactions on Telegram.
+- `_botFacebook` (array): Filter users based on interactions on Facebook.
+- `_agentAssigned` (array): Filter users assigned to specific agents.
+- `segments` (array): An array of segments to filter users.
+- `applicableFilters` (array): An array of applicable filters.
+- `lastSeenAt` (object): Date range filter for the last seen timestamp.
+- `createdAt` (object): Date range filter for the creation timestamp.
+- `userInteracted` (boolean): Indicates whether users have interacted.
+- `lastMessageBy` (array): Filter users based on the last message sender.
+- `isLiveChatActive` (boolean): Indicates whether live chat is active for users.
+- `hasOrdered` (object): Filter users based on their order history.
+
+#### **Sample Request**
+
+```
+curl 'https://api.v7. Convertalk.com/inbox/users' \
+  -X 'POST' \
+  -H 'Authorization: Bearer [MASKED_TOKEN]' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "searchText": "",
+    "tags": [],
+    "status": [],
+    "isOnline": false,
+    "_botWebsite": [],
+    "_botWhatsapp": [],
+    "_botTelegram": [],
+    "_botFacebook": [],
+    "_agentAssigned": [],
+    "segments": [],
+    "applicableFilters": ["userInteracted"],
+    "lastSeenAt": {
+      "startAt": "",
+      "endsAt": ""
+    },
+    "createdAt": {
+      "startAt": "",
+      "endsAt": ""
+    },
+    "userInteracted": true,
+    "lastMessageBy": [],
+    "isLiveChatActive": false,
+    "hasOrdered": {
+      "status": false,
+      "lastAt": ""
+    },
+    "page": 1,
+    "isExport": "none",
+    "isContact": true
+  }' \
+  --compressed
+```
+
+Replace `[MASKED_TOKEN]` in the request with your actual API token and customize the request body filters as needed for your use case.
+
+#### **Response**
+
+The API will respond with a JSON object containing the user data based on the applied filters. The response format may vary depending on the data available and the applied filters.
+
+Please replace `[MASKED_TOKEN]` in the request with your actual API token for actual usage.
+
+### **❓ Got any questions?**
+
+If you have any questions, you can look into our repository of FAQs, most likely, you will find your answer here, If not, write us at  [support@ Convertalk.com](mailto:support@ Convertalk.com).

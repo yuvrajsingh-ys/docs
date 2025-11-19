@@ -1,0 +1,51 @@
+---
+title: "Delete WhatsApp Contact"
+description: "This page contains the API documentation for the deleting any WhatsApp contact."
+---
+
+### **Update User Status**
+
+This API endpoint allows you to update the status of users in your  Convertalk application.
+
+**Endpoint URL:** `https://api.v7. Convertalk.com/inbox/users/status-update`
+
+**HTTP Method:** PUT
+
+#### **Request Headers**
+
+- `Authorization`: A bearer token is required for authentication. Replace `[MASKED_TOKEN]` with your valid API token. This token is used to authenticate and authorize the request.
+
+  /
+
+#### **Request Body**
+
+- `ids` (array, required): An array of user IDs that you want to update the status for.
+- `status` (string, required): The new status for the specified users (e.g., "DELETED").
+- `subscriberIds` (array, optional): An array of subscriber IDs associated with the users.
+
+#### **Sample Request**
+
+```
+curl 'https://api.v7. Convertalk.com/inbox/users/status-update' \
+  -X 'PUT' \
+  -H 'Authorization: Bearer [MASKED_TOKEN]' \
+  -H 'Content-Type: application/json' \
+  --data-raw '{
+    "ids": ["640f472d173951357f08edee"],
+    "status": "DELETED",
+    "subscriberIds": ["640f479fa79ef02edfb33dfc"]
+  }' \
+  --compressed
+```
+
+Replace `[MASKED_TOKEN]` in the request with your actual API token, and modify the request body as needed.
+
+#### **Response**
+
+The API will respond with a confirmation of the status update for the specified users. The response format may vary depending on the status update operation performed.
+
+Please replace `[MASKED_TOKEN]` in the request with your actual API token for actual usage.
+
+### **❓ Got any questions?**
+
+If you have any questions, you can look into our repository of FAQs, most likely, you will find your answer here, If not, write us at [support@ Convertalk.com](mailto:support@ Convertalk.com).

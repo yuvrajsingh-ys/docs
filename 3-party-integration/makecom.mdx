@@ -1,0 +1,104 @@
+---
+title: "Integrate  Convertalk with Make.com"
+description: "This page contains step by step guide on how you can integrate the make.com with  Convertalk."
+---
+
+You can connect  Convertalk with [Make.com](http://Make.com) to automate the lead details.
+
+<Info>
+  The following **TRIGGERS** can be set in  Convertalk:
+
+  1. Watch New Contact Created -\> This will be trigger when a new contact is created on  Convertalk platform.
+  2. Watch New Incoming Message -\> This will be triggered when a new incoming message is received on  Convertalk platform.
+  3. Watch New WhatsApp Order placed -\> This will be triggered when a new order on Whatsapp bot will be placed.
+</Info>
+
+<Info>
+  The following **ACTIONS** can be used in  Convertalk:
+
+  1. Add a contact -\> This will add a contact to your  Convertalk Account
+  2. Send Session Message -\> This will send a message through your WhatsApp bot
+  3. Send Template Message -\> This will send a template message through WhatsApp bot
+  4. Update Contact Attributes -\> Updates user-specific custom attributes of a contact
+</Info>
+
+### **How to use  Convertalk as Trigger**
+
+ 1. Log in to your  Convertalk account.
+ 2. Select the bot from the left panel which you want to integrate with [Make.com](http://Make.com)
+ 3. Then click on "Third Party Apps Integrations". Inside the bot you have selected.
+ 4. \
+    Then search for "Make" in the search bar as shown below. And click on "Connect"
+ 5. \
+    You will get the "BotID" inside the "Make" Integration. Click on copy button that is in-front of the BotID.
+ 6. Then click on "Scenario" which will redirect you to the "[Make.com](http://Make.com)" website.
+ 7. \
+    Click on "Create a new scenario" that is on top right of the screen.
+ 8. \
+    You can now click on the "\+" icon in canvas and search for  Convertalk in the search bar.
+ 9. Select the trigger events for your bot to initiate the action. Here we have selected "Watch New Contact Created"
+
+    <Info>
+      Procedure for setting up other  Convertalk Triggers are same
+    </Info>
+10. \
+    Select "New Contact Created Webhook" as you are creating it for the first time.  or Choose from the available Webhooks if you have created it earlier. Then click on "OK"
+11. \
+    Now you have to create a connection.
+
+- Give your connection a name.
+- Then enter the API Key from your  Convertalk account. (Follow instructions available below)
+- Select the platform of the bot you are integrating with.
+- Then paste the BotID which you copied earlier from [Make.com](http://Make.com) third party integration in  Convertalk
+
+Then click on "Save" button and your Trigger is set.
+
+**You can get API Key from the "Developers" section in  Convertalk. Then click on Access Token and copy the same.**
+
+12. \
+    Then you have to add an action which will take place once event trigger takes place.
+13. Click on the "\+" icon next to  Convertalk Bubble to add an action. Here we have used Google Sheets as action.
+14. \
+    Select the available events which are available on google sheet.
+15. Then select the google spreadsheet which you want to store the data into. Click on the choose file.
+16. \
+    Select the sheet for the same and set up the table content. You can select the values and attributes which you want to map in your sheet according to the column and row.
+17. \
+    Click on OK and save the settings made.
+18. On the top right you can see a toggle button which should be turned "ON" for your integration to work.
+19. Then go to  Convertalk and select the bot which you were integrating with [Make.com](http://Make.com)
+20. Select the Flow which you want to use.
+21. Click on "Test Live On WhatsApp Web". Then chat with the bot and provide the inputs asked.
+
+You can check your given google sheet, all the leads collected will be stored there.
+
+<Info>
+  Remember that the contact info entered should not be available on  Convertalk platform previously. As it will be considered as revisit lead and will not be triggered by  Convertalk app in Google sheet or any other app which is used as an action.
+</Info>
+
+### **How to use Action in  Convertalk**
+
+ 1. Go on [Make.com](http://Make.com) website and create a new scenario.
+ 2. Select a Trigger app by clicking on the "\+" icon. Here we have selected "Google Sheets".
+ 3. \
+    Then select an available Trigger events from the given options.
+ 4. \
+    Then setup your google sheet by filling all the required details from where you want to set trigger and fetch data for the action to take place.
+ 5. \
+    After completely setting up your Trigger.
+ 6. Click on "\+" icon next to the trigger.
+ 7. Search for  Convertalk and select an Action event which will take place after receiving the trigger.
+ 8. \
+    Set up connection by providing the **API key and BotID **from  Convertalk as explained above.
+ 9. If you have previously made a connection you will just need to select the bot and Whatsapp number in case of the action being triggered by a WA bot.
+10. \
+    Click on "OK" and save the changes.
+11. Remember to turn "ON" the integration that you have created.
+
+You have successfully connected  Convertalk as action. Once a trigger takes place your bot will follow the action.
+
+**You can also check all your connections in "connection" tab in the **[**Make.com**](http://Make.com)**. Here you can see the Email ID which you have connected and the Bot name which is mapped for the automation.**
+
+Here as we have selected "Send Template Message" as action. After receiving the leads data in google sheet. Whatsapp bot sent the template message on the provided phone number.
+
+ 

@@ -1,0 +1,92 @@
+---
+title: "Integrate  Convertalk with Jira CRM"
+description: "This page contains the stepwise tutorial for the integration with  Convertalk"
+---
+
+### **Step 1 of 5: Login to  Convertalk Account and Select Application to Integrate**
+
+a. Login to your  Convertalk account. Now, select and click the Bot you want to integrate
+
+with Jira CRM. Click on the**‘Integrate tab.’** 
+
+b. The Integrate Window Will Open up. Select the **‘All Integrations’ **Tab.
+
+c. A list of all native integrations for  Convertalk will be available in this window.
+
+d. Now find Jira CRM by:-
+
+- Either by scrolling down the list or,
+- by typing **‘Jira CRM’** in the Search Box with the placeholder “Search Integration By Name”
+
+e. Now click on the **‘Connect’** button as shown
+
+f. After you click the connect button, The Integration window for Jira CRM will appear, as shown below.
+
+g. To complete the process, you require three details:
+
+1. APi Token
+2. Email Address
+3. Jira CRM Domain
+
+### **Step 2 of 5: Find your Authorization Key/Token in App Account**
+
+a. To obtain the Jira API Token, log in to https://id.atlassian.com/manage/api-tokens.
+
+1. Click  **Profile** on the right-hand side top corner.
+2. On the **My API tokens** tab, click **New API Token**.
+3. On the **New API Token** pop-up, click **Create API Token**.
+4. On the **API Token Creation Result** pop-up, copy the APi Token. The API token format will be like
+
+   b. Email address is your Atlassian account email address. You can also see it from your
+
+   profile on the Jira CRM dashboard.
+
+   c. Jira CRM Domain is the part of the domain on the system dashboard that ends with
+
+   [_atlassian.net_](http://atlassian.net)_ _e.g. https://mycompany.atlassian.net.
+
+### **Step 3 of 5: Enter Authorization Details and establish connection with your App**
+
+a. Now enter APi key, Email address and Jira CRM Domain, and click the ‘Connect’ Button
+
+to complete integration of  Convertalk with Jira CRM.
+
+b. If you have entered all the details correctly, you will see a notification that says,
+
+“**Integrated.”**
+
+### **Step 4 of 5: Set up Mapping Parameters**
+
+a. Now, as connection of the  Convertalk and Jira CRM is established, you need
+
+to map **parameters (fields) of Jira CRM** to the user response of the  Convertalk question.
+
+You can use the **\+Add Parameters** button to add more fields.
+
+For example, you select a question from All bot questions/components: Please provide your name?
+
+Then, you map it with the parameter -Name
+
+As a result, this mapping will enable integration to send the user's response from  Convertalk to the Jira CRM’s **Name **field in the leads. Similarly, in order for integration to work properly, you will require to map all other questions/ components of your Bot to Jira CRM fields.
+
+Please note that these queries/questions options will be auto fetched from your bot chat flow, So, make sure you configure your chat flow first.
+
+b. If you have entered all the details correctly, you will see a notification that says,
+
+“**Mapped successfully.”**
+
+c. Also, your Jira CRM integration will show the message **Installed **in the Integration List.
+
+### **Step 5 of 5: Test your Integration Set up with Data**
+
+Once you have established a connection between ** Convertalk** and **Jira CRM** and the mapping is complete, you are ready to go for your first test lead. You can test your integration setup by creating a dummy lead on the bot. This lead should appear in your  Convertalk dashboard as well as in the Jira CRM that you have integrated.
+
+### **Still Not Working, Let’s Troubleshoot\!**
+
+If you are not getting dummy lead from your Bot to CRM, it may be due to the multiple reasons:
+
+- Wrong Authorization Details added- You will be required to check and see if all the authorization credentials such as Token, API key,and/or URL has been entered correctly.
+- Wrong Mapping Set up - Your mapping with  Convertalk Question and Jira CRM parameter is either incorrect or you haven’t added any mandatory parameter.
+- Free plan- You are not subscribed to the paid plan on  Convertalk as integration works only in paid plan.
+
+ 

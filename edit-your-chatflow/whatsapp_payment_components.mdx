@@ -1,0 +1,117 @@
+---
+title: "WhatsApp Payment Components"
+description: "Want to take in payments from WhatsApp? You've come to the right place!"
+---
+
+### **Why use WhatsApp Payment Component?**
+
+Integrating **WhatsApp Payment components** into your chatflow is a strategic move to streamline commerce, enhance user experience, and drive conversions directly within the conversation layer. As customer expectations evolve toward frictionless, real-time transactions, embedding payment functionality into WhatsApp — a platform with over 2 billion users — positions your product at the intersection of convenience, trust, and scale.
+
+---
+
+### **Benefits of using WhatsApp Payment:**
+
+1. Enable seamless in-chat checkout without redirecting users.
+2. Boost conversion rates by shortening the purchase journey.
+3. Build user trust with WhatsApp’s secure native payment flow.
+4. Automate 24/7 payment handling through chatbots.
+5. Offer personalized product recommendations with instant pay options.
+
+---
+
+### **Section A: How to use WhatsApp's "Payment" Component:**
+
+- Go to your chosen WhatsApp bot, and then click on "Edit Your Chatflow".
+
+  ![20 Whatsapp Payment Convertalk Botpenguin Resource C 1 Pn](/images/how-botpenguin-works/whatsapp-payment-comp/20.whatsapp_payment_Convertalk__botpenguin_resource_c-1.png)
+- Select the flow in which you want to include the Payment component into.
+
+  ![20 Whatsapp Payment Convertalk Botpenguin Resource C 2 Pn](/images/how-botpenguin-works/whatsapp-payment-comp/20.whatsapp_payment_Convertalk__botpenguin_resource_c-2.png)
+- Go to the "Trigger Actions", and then click on "Payments" to add the payments components.
+
+  ![20 Whatsapp Payment Components  Convertalk Resource C 3 Pn](/images/how-botpenguin-works/whatsapp-payment-comp/20.whatsapp_payment_components__Convertalk_resource_c-3.png)
+
+\
+Fill out the following details to setup you payment methodology and needs:
+
+![20 Whatsapp Payment Components  Convertalk Resource C 4 Pn](/images/how-botpenguin-works/whatsapp-payment-comp/20.whatsapp_payment_components__Convertalk_resource_c-4.png)
+
+- Select Payment Method: Choose the payment service we are going to use. You have the option to choose between
+  - All Pay
+  - RazorPay
+  - Peach Payments
+  - Telr Pay
+  - Tilo Pay
+
+    <Warning>
+      Make sure to go to the third party integrations and integrate the chosen method in the bot as well\! Else, the payment may through unexpected errors.
+    </Warning>
+- Select Currency: Select the currency of you choice from the dropdown.
+- Payment amount: Enter the amount that needs to be paid. If the amount is variable, we recommend you create a custom attribute that takes in the amount form the user, and use that here.
+- Choosing Flows: Choose the flows to redirect to when the payment is successful and unsuccessful
+
+And that's it\! Once you configured the payment gateway as well in the "Third Party Applications", you can start using the "Payments Component" just like any other component.
+
+### **Section B: How to use the "WhatsApp Payment" Component:**
+
+The following section deals with the setup of the "WhatsApp payments". Kindly note that you need to need to have completed business verification with before this can be used.
+
+1. To use this component, navigate again to the Flow you want to integrate this component into, and then click on the "WhatsApp Payments" component.
+
+   ![20 Whatsapp Payment Components  Convertalk Resource C 5 Pn](/images/how-botpenguin-works/whatsapp-payment-comp/20.whatsapp_payment_components__Convertalk_resource_c-5.png)
+2. Configure the following details onto the component:
+   - Message: Change the message according to your needs.
+   - Image: You can select an image to upload with the payment. This can be done using the box.
+   - Footer: Include a footer in the payment option, to appear alongside with the text.
+   - Select Payment Configuration: Selecting the name of the payment configuration that you have set up. Need to complete section C before setting this up.
+3. Once all the configuration in the WhatsApp payments is done, you need to go over to WhatsApp business manager on [business.facebook.com](http://business.facebook.com) for the setup of the payment method.
+
+---
+
+### **Section C: Setting up Payment Configuration on WhatsApp Manager:**
+
+- Go to https://business.facebook.com/, and click on the "Search" tab on the left-hand side.
+
+  ![20 Whatsapp Payment Components  Convertalk Resource C 6 Pn](/images/how-botpenguin-works/whatsapp-payment-comp/20.whatsapp_payment_components__Convertalk_resource_c-6.png)
+
+  <Info>
+    The page will appear different for everyone, but the sidebar will be the same.
+  </Info>
+- Search for "**WhatsApp Manager**".
+
+  ![20 Whatsapp Payment Components  Convertalk Resource C 6 Pn](/images/how-botpenguin-works/whatsapp-payment-comp/20.whatsapp_payment_components__Convertalk_resource_c-7.png)
+- Go to the "Payment Configuration" section of the new screen, near the bottom.
+
+  <Info>
+    Be sure that you are on the correct business portfolio account, which is changeable by using the dropdown near the top-left of the side bar.
+  </Info>
+  ![20 Whatsapp Payment Components  Convertalk Resource C 8 Pn](/images/how-botpenguin-works/whatsapp-payment-comp/20.whatsapp_payment_components__Convertalk_resource_c-8.png)
+- Select the country you want to configure the payment in. Current option include India and Singapore.
+- Click on "Add Configuration" on the top-right hand side.
+
+  ![20 Whatsapp Payment Components  Convertalk Resource C 9 Pn](/images/how-botpenguin-works/whatsapp-payment-comp/20.whatsapp_payment_components__Convertalk_resource_c-9.png)
+- Fill in the details in the following test, which include setting up the name of the payment(a.k.a. Payment Configuration), choosing the payment method.
+- Once you have entered all the details, a new payment configuration will be made, which you can now go back to in  Convertalk and configure the "Payment Configuration" section in.
+
+  ![20 Whatsapp Payment Components  Convertalk Resource C 10 Pn](/images/how-botpenguin-works/whatsapp-payment-comp/20.whatsapp_payment_components__Convertalk_resource_c-10.png)
+
+And, you are done\! You have successfully configured the Payments options on your WhatsApp bot.
+
+### **FAQ's:**
+
+Here are some common FAQ's regarding payment components in  Convertalk:
+
+<AccordionGroup>
+  <Accordion title="Can I use example of payments component in WhatsApp?">
+    
+  </Accordion>
+  <Accordion title="How to add custom attribute to payment tab?">
+    
+  </Accordion>
+  <Accordion title="Can you give example of proper use case of WhatsApp payments?">
+    
+  </Accordion>
+  <Accordion title="Where is the track of ayments that have happened?">
+    
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,104 @@
+---
+title: "Integrate  Convertalk with Google Sheets"
+description: "This page contains the stepwise tutorial for the integration of Google Sheets with  Convertalk"
+---
+
+### **Why Use  Convertalk with Google Sheets?**
+
+- **Real-time Data Sync** – Automatically store chatbot conversations, leads, and customer queries in Google Sheets for easy tracking and analysis.
+- **Automated Workflows** – Eliminate manual data entry by using Google Sheets as a backend for appointments, orders, feedback, and more.
+- **Instant Customer Engagement** – Fetch and update customer details dynamically from Google Sheets to provide personalized responses.
+- **Effortless Integration** – No coding or third-party tools required—simply connect and automate.
+- **Scalable & Flexible** – Perfect for sales, support, marketing, and surveys, adapting to your unique business needs.
+
+---
+
+### **Prerequisites:**
+
+The following conditions must be fulfilled to use Google Sheet Integration with  Convertalk:
+
+1. Convertalk Account: The user must have an active  Convertalk Account, and must have an active bot which they wish to connect.
+
+<Info>
+  Google Sheets integration is not available for MS Teams, Facebook, Instagram or Telegram.
+</Info>
+
+### **Step 1 of 4: Login to  Convertalk Account and Select Application to Integrate**
+
+1. Login to your  Convertalk account. Now, select and click the chatbot you want to integrate with Google Sheets. Click on the “Third-party Apps Integration”.
+2. Go to Google Sheets integration either by:
+   1. Searching for Google Sheets on the search bar available, or
+   2. Scrolling down to Google Sheets.
+3. Now Click On The **‘Connect’** Button As Shown
+4. Click on the "**Connect**" button to continue to the integration.
+5. Click on the "**Sign-in with Google**" to start the connection process.
+
+### **Step 2 of 4: Establish connection with your App**
+
+1. After you click the **“Sign In With Google”** button, it will redirect you to a Google login window. Here, fill out your account credentials and sign in.
+2. Now, click allow for  Convertalk to access your Google account.
+3. After you click allow, the connection between  Convertalk and Google Sheets is established, and you will be redirected back to  Convertalk onto the following page.
+
+### **Step 3 of 4: Set up Mapping Parameters**
+
+1. Now, you need to map **parameters (fields) of Google Sheets** to the user response of the  Convertalk question. In other words, you need to map the questions or custom attributes that will be saved to the Google Sheet. The fields that need to be entered are:
+   - **Title**: This is the title of the spreadsheet that you wish to create.
+   - **Select a Default Sheet**: Select in which you want the information to go to.
+   - **Select a Default Sub-Sheet:** Select the tab/sub-sheet in which the information will be mapped.
+   - **Map Questions:** Map the questions in the chatflow we wish to be stored in the spreadsheet.
+   - **Custom Attributes**: If the chat has custom attributes, we can utilize them to store values over in spreadsheet.
+
+<Warning>
+  Make sure you have a empty sheet made in your google sheet account, so it can be connect to  Convertalk.
+</Warning>
+
+You can use the **\+Add Parameters** button to add more fields.
+
+For example, you select a question: Please provide your name?. Then, you map it with the parameter -Name. As a result, this mapping will enable integration to send the user's response from  Convertalk to the Google Sheet’s \*\*Name \*\*field in the leads. Similarly, in order for integration to work properly, you will require to map all other questions/ components of your Bot to Google Sheets fields.
+
+<Info>
+  Please note that these queries/questions options will be auto fetched from your bot chat flow, so, make sure you configure your chat flow first.
+</Info>
+
+2. If you have entered all the details correctly, you will see a notification that says, “**Mapping successfully.**
+3. To test the integration, proceed to install the bot. Click on the top right "**Install**" button and go over to W3 schools, where we can run the copied code. This will show that the code has been copied and
+
+   <Info>
+     Your Google Sheets integration will show the message \*\*Installed \*\*in the Integration List.
+   </Info>
+
+### **Step 4 of 4: Test your Integration Set up with Data**
+
+Once you have established a connection between Convertalk and **Google Sheets**, and the mapping is complete, you are ready to go for your first test lead. You can test your integration setup by creating a dummy lead on the bot. This lead should appear in your  Convertalk dashboard as well as in the Google Sheets you have integrated.
+
+### **FAQ's**
+
+Here are some common FAQ regarding Google Sheets
+
+<AccordionGroup>
+  <Accordion title="Do I need to setup my chatflow before mapping?">
+    **Yes.** The integration auto-fetches fields/questions from your chat flow. Ensure the bot is fully configured before proceeding with the mapping step
+  </Accordion>
+  <Accordion title="What if my bot is not reflecting changes?">
+    If your spreadsheet does not reflect the additions done through conversation with the bot, try the following:
+
+    1. Try to install the application on W3 schools and run there.
+  </Accordion>
+  <Accordion title="How can I test whether my integration is working?">
+    After setup, run a **dummy test lead** through the chatbot. If configured properly, the data should appear in your **Google Sheet** and also reflect in your \*\* Convertalk dashboard.\*\*
+  </Accordion>
+  <Accordion title="What if my test data doesnt appear in sheets?">
+    Check for the following:
+
+    - Incorrect or missing **field mappings**
+    - **Mandatory fields** left unmapped
+    - Integration attempted on a **free plan** (must be on a paid plan for integration to work
+  </Accordion>
+</AccordionGroup>
+
+### **Still Not Working, Let’s Troubleshoot\!**
+
+If you are not getting dummy lead from your Bot to Google Sheets, it may be due to the multiple reasons:
+
+- Wrong Mapping Set up - Your mapping with  Convertalk Question and App parameter is either incorrect or you haven’t added any mandatory parameter.
+- Free plan- You are not subscribed to the paid plan on  Convertalk as integration works only in paid plan.

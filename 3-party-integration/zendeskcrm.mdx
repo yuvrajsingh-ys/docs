@@ -1,0 +1,106 @@
+---
+title: "Integrate  Convertalk with Zendesk CRM"
+description: "This page contains the stepwise tutorial for the integration with  Convertalk"
+---
+
+### **Why use Zendesk CRM?**
+
+Convertalk integrates with Zendesk to enhance customer support and improve ticket management. By combining  Convertalk’s AI-driven chatbot with Zendesk’s customer service and helpdesk platform, businesses can automatically respond to customer queries, create and assign tickets, and track customer interactions in real-time. This integration helps streamline workflows, reduce response times, and ensure customer issues are resolved efficiently.
+
+---
+
+### **Benefits of using Zendesk CRM:**
+
+- **Automated Customer Support:** Instantly provide responses to common inquiries, reducing response times and enhancing customer satisfaction.
+- **Efficient Ticket Creation:** Automatically generate support tickets based on chatbot interactions, ensuring no issue is overlooked.
+- **Seamless Handover to Agents:** Ensure smooth transitions from chatbot to live agents for complex queries, minimizing customer effort.
+- **24/7 Availability:** Offer continuous support through  Convertalk, ensuring customers get assistance at any time, day or night.
+
+---
+
+### **Step 1 of 5: Login to  Convertalk Account and Select Application to Integrate**
+
+a. Login to your  Convertalk account. Now, select and click the Bot you want to integrate
+
+with Zendesk CRM. Click on the ‘Integrate tab.’
+
+b. The Integrate Window Will Open up. Select the ‘All Integrations’ Tab.
+
+c. A list of all native integrations for  Convertalk will be available in this window.
+
+d. Now find Zendesk CRM by:-
+
+- Either by scrolling down the list or,
+- by typing **‘Zendesk’** in the Search Box with the placeholder “Search Integration By Name”
+
+e. Now Click On The **‘Connect’** Button As Shown
+
+f. An Interface, as shown below, will open up. Here, you will be asked to enter
+
+- APi Token
+- Email Address
+- APi URL
+
+that you will get by login to your Zendesk account.
+
+### **Step 2 of 5: Find your Authorization Key/Token in App Account**
+
+a. Click on ‘Admin’  tab on the left side of the Zendesk dashboard, you will find your
+
+API URL on the top-right corner. Now click on **‘Go to Admin Center’** to get your API Token.
+
+b. Go to Apps and Integrations\>Zendesk API. If you don’t have an Active API Token list,
+
+click **‘Add API Token’** to create one.
+
+c. Add a Label to your API Token and copy the code
+
+d. Save your API Token and it will be listed in the Active API Token list
+
+### **Step 3 of 5: Enter Authorization Details and establish connection with your App**
+
+a. Enter Zendesk API Token, API URL and Email Address registered with Zendesk, and
+
+click the ‘Connect’ Button to complete integration of  Convertalk with Zendesk.
+
+b. If you have entered all the details correctly, you will see a notification that says,
+
+“**Integrated Successfully.”**
+
+### **Step 4 of 5: Set up Mapping Parameters**
+
+a. Now, as connection of the  Convertalk and Zendesk is established, you need
+
+to map **parameters (fields) of Zendesk** to the user response of the  Convertalk question.
+
+You can use the **\+Add Parameters** button to add more fields.
+
+For example, you select a question from All bot questions/components: Please provide your name?
+
+Then, you map it with the parameter -Name
+
+As a result, this mapping will enable integration to send the user's response from
+
+Convertalk to the Zendesk’s Name field in the leads. Similarly, in order for integration to work properly, you will require to map all other questions/ components of your Bot to Zendesk fields.
+
+Please note that these queries/questions options will be auto fetched from your bot chat flow, So, make sure you configure your chat flow first.
+
+b. If you have entered all the details correctly, you will see a notification that says,
+
+“**Mapping successfully.**
+
+c. Also, your Zendesk CRM integration will show the message installed in the Integration
+
+List.
+
+### **Step 5 of 5: Test your Integration Set up with Data**
+
+Once you have established a connection between Convertalk and **Zendesk**, and the mapping is complete, you are ready to go for your first test lead. You can test your integration setup by creating a dummy lead on the bot. This lead should appear in your  Convertalk dashboard as well as in the Zendesk you have integrated.
+
+### **Still Not Working, Let’s Troubleshoot\!**
+
+If you are not getting dummy lead from your Bot to Zendesk, it may be due to the multiple reasons:
+
+- Wrong Authorization Details added- You will be required to check and see if all the authorization credentials such as API Token, API key, and/or URL has been entered correctly.
+- Wrong Mapping Set up - Your mapping with  Convertalk Question and App parameter is either incorrect or you haven’t added any mandatory parameter.
+- Free plan- You are not subscribed to the paid plan on  Convertalk as integration works only in paid plan.

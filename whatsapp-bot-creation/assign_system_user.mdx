@@ -1,0 +1,74 @@
+---
+title: "🦸‍♀️ Assign System User to WhatsApp Account"
+description: "This page contains the information in how you can assign system user to the WhatsApp Account"
+---
+
+This document will guide you through the step-by-step process of granting control of a WhatsApp Business Account to a system user using the Meta Business Suite. By following these instructions, you can ensure that the system user has the necessary access to perform actions using a System User access token.
+
+#### **Step 1: Access the Meta Business Suite**
+
+1. Open your web browser and navigate to the [Meta Business Suite](https://business.facebook.com/).
+2. Log in to your Meta Business Suite account using your credentials.
+
+#### **Step 2: Locate and Access Business Settings**
+
+1. In the Meta Business Suite, find the top-left dropdown menu that displays your business account name.
+2. Click on the Settings (gear) icon next to your business account name.
+
+#### **Step 3: Navigate to Business Settings**
+
+1. After clicking the Settings (gear) icon, a dropdown menu will appear.
+2. Click on "Business settings" from the dropdown menu.
+
+#### **Step 4: Create a system user**
+
+1. Navigate to `System Users` "Users" in the sidebar.
+2. Click on "System Users" and click "Add" to add a new user
+
+   ![226 Assign System User To Whatsapp Account  Convertalk 1 Pn](/images/platform-guidelines-training/assign-system-user/226.assign_system_user_to_whatsapp_account__Convertalk-1.png)
+3. Accept the policy to start adding user
+
+   ![226 Assign System User To Whatsapp Account  Convertalk 2 Pn](/images/platform-guidelines-training/assign-system-user/226.assign_system_user_to_whatsapp_account__Convertalk-2.png)
+4. Once the "Create system user" pop-up opens, Give a name (E.g. BP-WhatsApp) and keep the user role as "Admin"
+
+   ![226 Assign System User To Whatsapp Account  Convertalk 3 Pn](/images/platform-guidelines-training/assign-system-user/226.assign_system_user_to_whatsapp_account__Convertalk-3.png)
+5. Once the system user is added, Click on the "Generate new token"
+
+   ![226 Assign System User To Whatsapp Account  Convertalk 4 Pn](/images/platform-guidelines-training/assign-system-user/226.assign_system_user_to_whatsapp_account__Convertalk-4.png)
+6. Once the "Generate Token" pop-up opens up,
+   - Select the App that you created earlier.
+   - Choose Token expiration as "Never"
+   - Assign following permissions
+     - business_management
+     - catalog_management
+     - whatsapp_business_messaging
+     - whatsapp_business_management
+
+     ![226 Assign System User To Whatsapp Account  Convertalk 5 Pn](/images/platform-guidelines-training/assign-system-user/226.assign_system_user_to_whatsapp_account__Convertalk-5.png)
+   - Click "Generate Token"
+7. Copy the token and save it safely.
+
+#### **Step 5: Access WhatsApp Business Accounts**
+
+1. In the Business settings page, navigate to the "Accounts" section.
+2. Click on "WhatsApp Accounts."
+
+   ![226 Assign System User To Whatsapp Account  Convertalk 7 Pn](/images/platform-guidelines-training/assign-system-user/226.assign_system_user_to_whatsapp_account__Convertalk-6.png)
+
+#### **Step 6: Assign a System User**
+
+1. On the WhatsApp Accounts page, you will see a gray "Add People" button. Click on it.
+2. A list of available system users will appear.
+
+   ![226 Assign System User To Whatsapp Account  Convertalk 7 Pn](/images/platform-guidelines-training/assign-system-user/226.assign_system_user_to_whatsapp_account__Convertalk-7.png)
+
+#### **Step 7: Assign Full Control**
+
+1. Select the appropriate system user from the list.
+2. Assign "Full control" permissions to the selected system user over the WhatsApp Business Account.
+
+   ![226 Assign System User To Whatsapp Account  Convertalk 8 Pn](/images/platform-guidelines-training/assign-system-user/226.assign_system_user_to_whatsapp_account__Convertalk-8.png)
+
+Congratulations\! You have successfully granted control of a WhatsApp Business Account to a system user. This allows the system user to access endpoints that require control of the WhatsApp Business Account using a System User access token.
+
+Please ensure to grant access to trusted and authorized system users only. If you encounter any difficulties during the process or have further questions regarding WhatsApp Business Account control, please refer to the official Meta documentation or contact their support team for assistance.

@@ -1,0 +1,88 @@
+---
+title: "Integrate  Convertalk with Google Gemini"
+description: "This page provides an in-depth guide on integrating  Convertalk with Google Gemini.
+
+"
+---
+
+### **Overview**
+
+The integration of Google Gemini with  Convertalk brings cutting-edge generative AI capabilities to your chatbot experience. Gemini, Google’s state-of-the-art multimodal LLM (Large Language Model), enables natural, context-aware, and multi-turn conversations that go beyond standard automation.
+
+This guide outlines the step-by-step process to integrate Google Gemini with  Convertalk.
+
+---
+
+### **Prerequisites**
+
+Before you begin, ensure the following:
+
+- You have admin-level access to your  Convertalk account.
+- A valid Google Cloud Project with the Gemini API enabled.
+- Access to Gemini API credentials (API key or OAuth token).
+- Access to  Convertalk's LLM Integration settings.
+
+---
+
+### **Steps to Integration**
+
+#### **Step 1: Enable Gemini API on Google Cloud**
+
+1. Visit Google Cloud Console.
+2. Select or create a new project.
+3. Go to **APIs & Services \> Library**.
+4. Search for **Gemini API** (or Vertex AI API) and click **Enable**.
+
+---
+
+#### **Step 2: Generate API Credentials**
+
+1. Go to **APIs & Services \> Credentials**.
+2. Click **“Create Credentials”** → choose **API Key**.
+3. Copy the API key and keep it secure.
+
+> 🔐 Tip: For production-level integrations, use service accounts and OAuth for enhanced security.
+
+#### **Step 3: Add Gemini in  Convertalk**
+
+1. Log in to your  Convertalk dashboard.
+2. Select the "Third-Party Apps Integrations"
+3. Search for "Google Gemini"
+4. Click on Connect, and enter the API key.
+
+Congratulations\! You have successfully integrated  Convertalk with Google Gemini\!
+
+---
+
+### **FAQ's**
+
+<AccordionGroup>
+  <Accordion title="Which Gemini models are supported in  Convertalk?">
+     Convertalk currently supports:
+
+    - `Gemini-Pro`
+    - `Gemini-2.0-Flash`
+    - `Gemini-2.0-Flash-Lite`
+
+    These models offer a trade-off between response quality and speed, allowing you to pick what’s best for your use case.
+  </Accordion>
+  <Accordion title="Where can I get the API key for gemini integration?">
+    You can generate your Gemini API key from the **Google Cloud Console**:
+
+    - Go to **APIs & Services \> Credentials**
+    - Click **“Create Credentials” \> API Key**
+    - Ensure that the **Gemini (Vertex AI)** API is enabled in the selected project.
+  </Accordion>
+  <Accordion title="Can I use both OpenAI and Gemini models in one  Convertalk account?">
+    No, one bot can only be Intgrated to one LLM model at a time.
+  </Accordion>
+  <Accordion title="What happens if my API key gets invalid or quota is exceeded?">
+    If the key becomes invalid or quota limits are hit:
+
+    - The bot will fall back to a default message.
+    - An error notification will appear in the integration logs under `Settings > LLM Integration`.
+    - You will receive a platform alert to take corrective action.
+  </Accordion>
+</AccordionGroup>
+
+ 

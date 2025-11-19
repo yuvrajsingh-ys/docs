@@ -1,0 +1,117 @@
+---
+title: "Integrate  Convertalk with Google Calendar"
+description: "This is a step by step guide to showcase the integration of Google Calendar with  Convertalk"
+---
+
+### **Why use Google Calendar?**
+
+Convertalk integrates with Google Calendar to automate scheduling, reminders, and event management. By syncing  Convertalk’s AI-driven chatbot with Google Calendar, businesses can automatically schedule meetings, send reminders, and manage calendar events through chatbot interactions. This integration helps streamline the scheduling process, ensures timely reminders, and enhances overall productivity by reducing manual calendar management.
+
+---
+
+### **Benefits of using Google Calendar:**
+
+- **Automated Scheduling:** Instantly schedule, update, and manage events on Google Calendar through chatbot interactions.
+- **Real-Time Reminders:** Set automatic reminders for upcoming events and appointments, ensuring no meetings are missed.
+- **Seamless Event Management:** Easily create, reschedule, or cancel events with the help of  Convertalk, directly syncing with Google Calendar.
+- **Improved Productivity:** Eliminate manual scheduling tasks and reduce administrative workload, allowing users to focus on more critical tasks.
+
+---
+
+#### **Why Integrate Google Calendar with  Convertalk?**
+
+- **Automate Appointment Scheduling**: Seamlessly book meetings or appointments directly through the chatbot without manual follow-ups.
+- **Real-Time Availability**: Display available time slots dynamically, reducing back-and-forth communication.
+- **Instant Event Creation**: Automatically create calendar events when a user confirms a booking via the bot.
+- **Improved User Experience**: Provide a smoother, faster, and more interactive scheduling process for leads and clients.
+- **Avoid Double Bookings**: Sync with your existing calendar to prevent conflicts and ensure accurate scheduling.
+
+  <Info>
+    Google Calendar integration is not available for MS Teams, Instagram, Facebook or Telegram
+  </Info>
+
+### **Steps to Integrate Google Calendar with  Convertalk**
+
+ 1. Login to your  Convertalk account. Now, select and click the chatbot you want to integrate with Google Calendar. Click on the “**Third-party Apps Integration”.**
+ 2. Search for Google Calendar by:
+    - Searching for Google Calendar on the search bar available, or
+    - Scrolling down to Google Calendar.
+ 3. Click on the "**Connect**" button to connect bot with Google Calendar. Click on "**Connect**" again on the integration page to proceed further.
+ 4. Click on "**Sign-in with Google**" to sign in and proceed further. This step will link your Calendar with the bot.
+ 5. Enter your valid email-id and password to login.
+ 6. After clicking Next, you will eventually proceed to the permissions page. Allow all permissions by clicking on "**Allow**".
+ 7. Post Allow, we will be taken to the main page of the integration, where we have to configure the same. The details to be filled are:
+    - **Appointment Summary**: This will be the name of the appointment, that will be displayed in the calendar.
+    - **Appointment Description**: A short description of the appointment. Can include the main aims and agenda of the meeting.
+    - **Include Meeting Link**: Adds a Google Meet link if toggled on.
+    - **Question**: Mapping the questions from the chatflow to the attribute. The two attributes are:
+      1. **Email**: Maps the email of the user.
+      2. **Date/Time**: Used through the "**Appointment**" component, this is used to find a suitable time for the meeting.
+ 8. Once satisfied, click on the "**Save**" button.
+ 9. Now, the integration can be tested using a simulation. Download the bot onto a website(or use W3 schools), and test it out. Upon successful completion, an appointment will be booked.
+
+    <Info>
+      Run the chatbot on W3 schools by running the installation code(found after clicking install) on the HTML tutorial screen (https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default).
+    </Info>
+10. Verify the chatbot by looking in your google calendar and finding the desired appointment.
+
+### **FAQ's**
+
+A lot of questions might arise when integrating  Convertalk with Google Calendar. Some of the most popular questions are answered below:
+
+<AccordionGroup>
+  <Accordion title='Why is "no slots available" error showing up?'>
+    If, during the testing of the workflow, a "No Slots Available" message is coming, then:
+
+    1. Ensure that the available time is not zero i.e. the bot is available at least someday for some time.
+    2. Put an additional component(preferably email) before the Appointment component and test the flow.
+  </Accordion>
+  <Accordion title="Why are no appointments being booked while testing">
+    If the bot is not showcasing appointments booked using the "Test" mechanism, note that it will only show them when actually installed. Hence, install the bot on W3 schools, and test the chatflow. Note the timing of the meeting and then confirm on Google Calendar.
+  </Accordion>
+  <Accordion title="Can I connect more than 1 google calendar account?">
+    No, each bot can only be connected to one Google Calendar at a time. Multiple accounts are not supported per bot instance.
+  </Accordion>
+  <Accordion title="Does the integration support recurring events?">
+    No, recurring events are not currently supported. If multiple appointments are needed, they must be either manually added or configured as multiple booking opportunities within the chatflow.
+  </Accordion>
+  <Accordion title="Can I integrate with a shared or a team calendar instead of a personal calendar">
+    At present,  Convertalk only supports integration with the primary calendar associated with the connected Google account. Shared or team calendars are not natively supported unless added to the same Google account and made the default.
+  </Accordion>
+  <Accordion title="Is the time zone automatically adjusted based on user or admin location?">
+    Yes, time zone detection and adjustment are automatic. The calendar booking respects the local time zone of the user interacting with the chatbot.
+  </Accordion>
+  <Accordion title="Can I edit or cancel appointments after they are booked?">
+    Currently, end users cannot cancel or edit their appointments once confirmed. However, the admin can manually cancel appointments from their Google Calendar. Please note that users will not receive a cancellation notification at this stage.
+  </Accordion>
+  <Accordion title="Can users choose meeting duration while booking?">
+    No, the meeting duration is fixed during the bot setup. The configured duration applies to all bookings through the chatbot interface.
+  </Accordion>
+  <Accordion title="Are email confirmations sent after booking?">
+    Yes, confirmation emails are sent to the user after they have booked an appointment.
+  </Accordion>
+  <Accordion title="Is there a way to add buffer between appointments (eg : 10 min gap) ?">
+    No, currently there is no inbuilt support for buffer time between appointments. The time slots will be booked consecutively based on availability.
+  </Accordion>
+  <Accordion title="Does multiple bots use same google calendar for booking?">
+    Yes, multiple bots can use the same Google Calendar account for scheduling, provided they are configured to connect with the same calendar during integration.
+  </Accordion>
+  <Accordion title="Is there a limit of how many bookings can be made per day via bot?">
+    There is no hard limit imposed by the bot. However, the number of bookings is logically constrained by the duration of available time in a day and the configured meeting duration per slot.
+  </Accordion>
+  <Accordion title="How can I test google calendar integration before deploying to production">
+    You can simulate the bot’s behavior using [W3 Schools](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro). Simply install the bot using the generated code and test the flow before live deployment.
+  </Accordion>
+  <Accordion title="How do I properly configure the chatbot with gogle calendar?">
+    Follow these key steps:
+
+    1. **Integrate the bot with Google Calendar** via the Third-Party Integrations section in your  Convertalk dashboard.
+    2. Ensure that your chatbot’s default flow includes **Email** and **Name** collection components before booking.
+    3. Add the **Calendar component** to the chat flow after collecting user details.
+    4. Navigate to: `Third-party Apps Integration → Google Calendar → Edit`
+    5. In the configuration:
+       - Map the **Email** field from the chat flow to the **Email** field in the integration form.
+       - Map the **Calendar component** to the **Date/Time** field.
+    6. Click **Update** to finalize and save the integration.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,95 @@
+---
+title: "Integrate  Convertalk with Twilio"
+description: "This page provides a step-by-step guide on integration of  Convertalk with Twilio"
+---
+
+### **Why use Twilio?**
+
+Integrate Twilio with your  Convertalk chatbot to enable seamless SMS and WhatsApp messaging. This allows your chatbot to reach users directly on their phones, improving engagement, outreach, and customer satisfaction. Whether you're sending order updates or automating lead follow-ups, Twilio ensures reliable delivery.
+
+---
+
+### **Prerequisites**
+
+Before you begin, ensure the following:
+
+- You have an active **Twilio account** with a verified phone number or WhatsApp Business number.
+- You have access to your **Twilio Account SID** and **Auth Token**.
+- Your  Convertalk chatbot is published and assigned to a valid channel.
+
+---
+
+### **Steps to Integrate  Convertalk with Twilio:**
+
+#### **Step 1: Going to Integration on  Convertalk**
+
+1. Sign into your  Convertalk account and choose the chatbot. Go to "Third Party Apps Integrations"
+2. \
+   Go to **Twilio integration** either by:
+   - Searching for **Twilio** on the search bar available, or
+   - Scrolling down to **Twilio** under the list of integrations
+3. \
+   Click on the connect button to make the connection.
+4. Click on the connect button again on the integration screen, and we'll be at the integration.
+
+#### **Step 2: Getting the Information from Twilio.**
+
+ 1. Go to [Twilio](https://www.twilio.com/en-us/messaging?cq_plac=&cq_net=g&cq_pos=&cq_med=&cq_plt=gp&utm_source=google&utm_medium=cpc&utm_term=twilio&utm_campaign=G_S_APAC_Brand_Brand_EN_NZ_All-175766865754&gad_source=1&gad_campaignid=22072023754&gbraid=0AAAAADcHgwV1of7g1Pqst0ZvCIN5Hsnyv&gclid=CjwKCAjw6NrBBhB6EiwAvnT_rtLC6d66Fiq2y1_9fZbcLTd11VNqi6fBUlJa7MoAbbUPceiWzGUf7xoCaEcQAvD_BwE) and sign into your account. Make an account if you don't have one.
+ 2. You will land on your dashboard, as shown in the picture below.
+ 3. \
+    If you do not have a Twilio number, then the same will need to be created for us to proceed forward. For getting a Twilio number, simply click on the "Get a number" present on the screen, and Twilio will assign you a 10 digit number.
+ 4. Now, scroll down to the bottom of the Dashboard, where you will find the "**Account SID**", "**Auth Token**", and your **Twilio Phone Number**.
+ 5. \
+    Copy and paste the same tokens in the  Convertalk Applciation.
+ 6. Next, click on Phone Number -\> Manage -\> TwiLM apps. Here, click on "**Create new TwiML App**".
+ 7. \
+    Fill the Name and Request URL which is under "Voice Configuration".
+    - Set the name as " Convertalk".
+    - Copy the code in  Convertalk Twilio Integration Screen, and paste it in the Request URL box.
+ 8. \
+    This will create a new application.
+ 9. Click on the application to see the **TwiLM App SID**. Copy the ID over to the  Convertalk platform.
+10. \
+    Lastly, for the API Key and for the API Secret, click on the top right ""**Admin**" icon, and then click on "Account Management"
+
+    <Info>
+      You may be asked to verify your identity. Please do so.
+    </Info>
+11. \
+    Click on "API Keys & Tokens", and then click on "**Create API Key**".
+12. \
+    Enter a name for the API Key, as demonstrated below, and then click on create.
+13. \
+    Note the secret keys that come up.
+
+    <Info>
+      Make sure to copy the keys as they will not appear again. Store them in a safe place
+    </Info>
+14. \
+    Copy the same in your  Convertalk Account.
+15. \
+    Click on update to update the integration.
+16. For the final changes, go to Phone Number -\> Active Numbers, and click on the same.
+17. \
+    Make sure both the "Voice Configuration", and scrolling down, the Messaging Configuration have the URL as copied from  Convertalk.
+18. \
+    Click on "**Save Configuration**".
+
+And you're done\! You're now free to use the Twilio Integrations with your bots\!
+
+---
+
+### **FAQ's:**
+
+Here are some common FAQ's regarding Twilio Integration
+
+<AccordionGroup>
+  <Accordion title="Does  Convertalk offer SMS services with Twilio">
+    No,  Convertalk only offers Twilio with Voice calling configuration.
+  </Accordion>
+  <Accordion title="Which bots are available for integration with Twilio">
+    WhatsApp bots are the only bots that can be integrated with Twilio.
+  </Accordion>
+</AccordionGroup>
+
+ 

@@ -1,0 +1,88 @@
+---
+title: "Microsoft Teams Bot"
+description: "This page contains information on how to create Microsoft teams, bot on Microsoft developer panel."
+---
+
+## **Required information for Creating MS Teams Chatbot**
+
+To do MS Teams integration, you will need the following details on your end.
+
+- Bot ID
+- Bot Password
+- Update the Webhook endpoint in the Bot Details
+- Create and Publish an app for your organization
+
+## **Steps to complete integration**
+
+### **Step 1: Setup MS Teams Bot**
+
+1. Login to the MS Teams using the following URL https://teams.microsoft.com/v2/. If you do not have the MS Teams documentation, Create the one before proceeding.
+2. Once logged in, Navigate to the developer portal of MS Teams.
+
+   ![11 Microsoft Teams Bot  Convertalk Resource Centre 1 Pn](/images/how-botpenguin-works/create-newchatbot/11.microsoft_teams_bot__Convertalk_resource_centre-1.png)
+3. Choose the "Tools" tab and click on "Bot Management Option"
+
+   ![11 Microsoft Teams Bot  Convertalk Resource Centre 2 Pn](/images/how-botpenguin-works/create-newchatbot/11.microsoft_teams_bot__Convertalk_resource_centre-2.png)
+4. On this Page, Locate the "New Bot" option and add the bot by giving it a name.
+5. Once the bot is created, Enter the following Webhook endpoint address and click "save" to proceed. https://api.v7. Convertalk.com/ms-teams/webhook
+
+   ![11 Microsoft Teams Bot  Convertalk Resource Centre 3 Pn](/images/how-botpenguin-works/create-newchatbot/11.microsoft_teams_bot__Convertalk_resource_centre-3.png)
+6. Navigate to "Client Secrets" and add new and Copy the Provide secret key. Keep this secret key safe. This will be used while creating the configuration on  Convertalk.
+
+   ![11 Microsoft Teams Bot  Convertalk Resource Centre 4 Pn](/images/how-botpenguin-works/create-newchatbot/11.microsoft_teams_bot__Convertalk_resource_centre-4.png)
+7. Return to the bot listing page and copy the "Bot ID". Keep this key safe. This will be used while creating the configuration on  Convertalk.
+
+   ![11 Microsoft Teams Bot  Convertalk Resource Centre 5 Pn](/images/how-botpenguin-works/create-newchatbot/11.microsoft_teams_bot__Convertalk_resource_centre-5.png)
+
+### **Step 2: Create the MS Teams App**
+
+1. Navigate back to the "Apps" tab and click on "New App".
+2. Create the new app by providing the name. (e.g  Convertalk)
+3. Fill in the basic information of the App.   An example of the same is as follows
+   - Short Name -  Convertalk
+   - Full name -  Convertalk - The chatbot builder platform
+   - Short description-  Convertalk is an omnichannel platform to automate your communications.
+   - Long description -  Convertalk is an advanced chatbot platform designed to streamline and enhance conversational experiences for businesses across various industries. With a focus on user-friendly interactions,  Convertalk leverages artificial intelligence and natural language processing to create intelligent chatbots that can efficiently handle customer queries, provide information, and engage in meaningful conversations.
+   - Version - 1.0.0
+   - Developer or company name -  Convertalk
+   - Website (must be a valid HTTPS URL) - https:// Convertalk.com/
+   - Privacy policy- https:// Convertalk.com/privacy-policy
+   - Terms of use - https:// Convertalk.com/terms-and-conditions
+   - App ID: Same as Bot ID
+
+     ![11 Microsoft Teams Bot  Convertalk Resource Centre 6 Pn](/images/how-botpenguin-works/create-newchatbot/11.microsoft_teams_bot__Convertalk_resource_centre-6.png)
+4. You can give your own branding to your app or leave as it is.
+
+   ![11 Microsoft Teams Bot Convertalk Resource Centre 8 Pn](/images/how-botpenguin-works/create-newchatbot/11.microsoft_teams_bot__Convertalk_resource_centre-8.png)
+5. Navigate to the "App Features" tab and add the "Bot". Once the next page opens, choose the relevant bot and assign the following scopes
+   - Personal
+   - Teams
+   - Group Chat
+
+   Also, Check the following options under what your bot can do.
+   - Upload and Download files
+
+     ![11 Microsoft Teams Bot  Convertalk Resource Centre 8 Pn](/images/how-botpenguin-works/create-newchatbot/11.microsoft_teams_bot__Convertalk_resource_centre-8.png)
+
+     
+     9. Now, Move to the "Publish to Org" tab, and Submit your app for your organization.
+
+     ![11 Microsoft Teams Bot  Convertalk Resource Centre 9 Pn](/images/how-botpenguin-works/create-newchatbot/11.microsoft_teams_bot__Convertalk_resource_centre-9.png)
+
+   ### **Step 3: Approve your app as Admin**
+   1. Open the Teams admin portal using the following link https://admin.teams.microsoft.com/
+   2. Locate the "Manage Apps" options under the "Team Apps" Section. Search for your app and click on the same.
+
+      ![11 Microsoft Teams Bot  Convertalk Resource Centre 10 Pn](/images/how-botpenguin-works/create-newchatbot/11.microsoft_teams_bot__Convertalk_resource_centre-10.png)
+   3. Click on the App and Click "Publish"
+   4. Once you have approved the apps, It takes some time to get listed for your users.
+
+   ### **Step 4: Save the configuration on  Convertalk**
+   1. Navigate to the Convertalk Dashboard.
+   2. Click on "Create new bot" on the top left.
+   3. Choose MS Teams as the channel.
+   4. Name your bot and Fill in the Bot ID and Bot Secret (Bot Password) which you copied in 1st step.
+
+      ![11 Microsoft Teams Bot  Convertalk Resource Centre 11 Pn](/images/how-botpenguin-works/create-newchatbot/11.microsoft_teams_bot__Convertalk_resource_centre-11.png)
+
+Once you have updated the same. Your bot will be created.

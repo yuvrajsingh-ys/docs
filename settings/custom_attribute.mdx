@@ -1,0 +1,68 @@
+---
+title: "Custom Attribute"
+description: "This page contains step by step process of how you can create and manage the custom attribute in  Convertalk."
+---
+
+### **What are Custom Attributes?**
+
+Custom attributes are user-defined data fields that your chatbot can save and recall. In  Convertalk, a custom attribute is like a named variable or property attached to a user’s profile. For example, if you ask a user for their city in a chat flow, you can store that answer in a custom attribute called “city.” The bot will remember this information and can use it later in the conversation. Custom attributes let your chatbot capture and store specific information about each user, making it possible to personalize messages and experiences based on that data.
+
+---
+
+### **Benefits of using Custom Attributes:**
+
+- **Personalized Conversations** – Tailor interactions by recalling user details like names or interests, making them feel recognized.
+- **Structured Data Collection** – Easily gather and organize user info (e.g., emails, preferences) in a structured way.
+- **Targeted Messaging** – Filter users by attributes for relevant broadcasts (e.g., special offers based on location or interests).
+- **Improved Engagement** – Use stored data to suggest products or answer questions, boosting satisfaction.
+- **Seamless Integrations** – Sync attributes with CRMs or APIs to automate workflows and enhance functionality.
+
+---
+
+### **How to Set up Custom Attributes:**
+
+Follow these steps to set up a new custom attribute in  Convertalk:
+
+1. Go to  Convertalk and sign in to your account. After logging in, you’ll see the main  Convertalk dashboard with navigation menus.
+
+   ![191 Custom Attribute  Convertalk Resource Centre 1 Pn](/images/how-botpenguin-works/custom-attribute/191.custom_attribute__Convertalk_resource_centre-1.png)
+2. In the dashboard side menu, click the **More** button (often marked with three dots or a gear icon). Then select **Account/Settings** from the dropdown. This will open your account settings page.
+
+   ![191 Custom Attribute  Convertalk Resource Centre 2 Pn](/images/how-botpenguin-works/custom-attribute/191.custom_attribute__Convertalk_resource_centre-2.png)
+3. In the Account/Settings area, find and click the **Custom Attributes** tab. This takes you to the Custom Attributes page, where all your attributes are listed. (If this is your first time, the list may be empty.) On this page you can manage existing attributes or add new ones.
+
+   ![191 Custom Attribute  Convertalk Resource Centre 3 Pn](/images/how-botpenguin-works/custom-attribute/191.custom_attribute__Convertalk_resource_centre-3.png)
+4. Click the **Add Attribute** (or **Add New Attribute**) button. A form will appear with fields to fill out:
+5. Choose between "To save API Responses", which will save the the answers to API response, or "To map Chatbot Responses", which will save response to the flow.
+
+- **Attribute Key:** Enter a short, unique key name for the attribute. Use only lowercase letters with no spaces or special characters (for example, `city` or `email`). This key is how  Convertalk stores the data internally.
+- **Attribute Name:** Enter a friendly display name (e.g. `City` or `Email Address`). This is what you or other team members will see in the interface.
+- **Optional – Link to Flow Question:** (If you want the bot to save a user’s answer automatically) select the **Bot**, **Flow**, and **Question** that this attribute should be linked to. For example, if you have a flow that asks “What is your city?”, select that question. This tells  Convertalk to save the user’s answer to your question into this attribute. Fill in these details carefully. Keeping the key simple (lowercase, no spaces) ensures the attribute works correctly.
+  6.  Click on "Add Attribute" to add the attribute.
+
+And that's it, now you can use this custom attribute anyplace you desire\!
+
+### **FAQ's:**
+
+<AccordionGroup>
+  <Accordion title="What are custom attributes?">
+    Custom attributes are extra pieces of information you can collect and save about each user, like their city, favorite product, or subscription plan.
+  </Accordion>
+  <Accordion title="Why should I use the custom attributes?">
+    They help you personalize messages, filter contacts, and automate chatbot conversations based on user preferences or data.
+  </Accordion>
+  <Accordion title="Can I dynamically update custom attribute during a conversation?">
+    Yes. You can capture and update values through chat inputs using Question Blocks or automation rules, ensuring the attribute always reflects the latest information.
+  </Accordion>
+  <Accordion title="Difference between custom attributes and tags?">
+    Tags categorize users into groups (like labels), while custom attributes hold specific data (like age, plan type, or company name) that can be used in logic or personalization.
+  </Accordion>
+  <Accordion title="Can I set default value for custom attributes if the user has not provided any?">
+    Yes. You can configure fallback values using the `{{customAttribute || defaultValue}}` syntax in messages or set them via automation flows.
+  </Accordion>
+  <Accordion title="Is it possible to use custom attributes for lead segmentation?">
+    Absolutely. You can segment users based on attribute values—like filtering users by “Plan Type = Premium” or “Location = New York”—and send targeted messages accordingly.
+  </Accordion>
+</AccordionGroup>
+
+ 

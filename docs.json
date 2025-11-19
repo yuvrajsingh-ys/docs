@@ -1,116 +1,433 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "mintlify ",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
     "dark": "#15803D"
   },
-  "favicon": "/favicon.svg",
+  
   "navigation": {
     "tabs": [
-      {
-        "tab": "Guides",
+       {
+        "tab": "How Convertalk Works?",
         "groups": [
-          {
-            "group": "Getting started",
+           {
+            "group": "Onboarding",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "onboarding/how_to_get_started"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Create New Chatbot",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "how-Convertalk-works/website_chatbot",
+              "how-Convertalk-works/landing_page_chatbot",
+              "how-Convertalk-works/whatsapp_chatbot",
+              "how-Convertalk-works/instagram_chatbot",
+              "how-Convertalk-works/facebook_chatbot",
+              "how-Convertalk-works/telegram_chatbot"            ]
+          },
+          {
+            "group": "Edit Your Chatflow",
+            "pages": [
+              "edit-your-chatflow/multiple_flows",
+              "edit-your-chatflow/request_info",
+              "edit-your-chatflow/send_info",
+              "edit-your-chatflow/trigger_action",
+              "edit-your-chatflow/whatsapp_payment_components"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Pre-Built Chatbot Templates",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "prebuilt-chat-comp/prebuilt_chat_compo"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Train Your AI Chatbot",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "train-your-ai-chatbot/website",
+               "train-your-ai-chatbot/file_upload",
+               "train-your-ai-chatbot/google_sheets",
+               "train-your-ai-chatbot/faqs",
+              "train-your-ai-chatbot/unanswered_questions",
+              "train-your-ai-chatbot/other_sources"
+            ]
+          },
+          {
+            "group": "Install Your Chatbot",
+            "pages": [
+              "install-your-chatbot/install_website_chatbot",
+               "install-your-chatbot/install_website_chatbot_on_custom_build_website",
+               "install-your-chatbot/install_website_on_wordpress",
+               "install-your-chatbot/install_website_on_wix",
+              "install-your-chatbot/instal_website_on_squarespace",
+              "install-your-chatbot/widget_installation"
+            ]
+          },
+          {
+            "group": "Automation",
+            "pages": [
+              "automation/widget",
+              "automation/whatsapp_template_setup",
+              "automation/whatsapp_catelog_setup",
+              "automation/whatsapp_flows_setup",
+              "automation/whatsapp_broadcast_setup",
+              "automation/whatsapp_drip_campaign_setup",
+              "automation/facebook_autoreply_feature",
+              "automation/instagram_autoreplies",
+              "automation/instagram_automation" 
+            ]
+          },
+          {
+            "group": "Website Bot Settings",
+            "pages": [
+              "website_bot_setting/design",
+              "website_bot_setting/general",
+              "website_bot_setting/alert",
+              "website_bot_setting/trigger",
+              "website_bot_setting/user_access",
+              "website_bot_setting/chat_window",
+              "website_bot_setting/ai_setting"
+            ]
+          },
+          {
+            "group": "WhatsApp Chatbot Settings",
+            "pages": [
+              "whatsapp-chatbot-setting/general",
+              "whatsapp-chatbot-setting/trigger",
+              "whatsapp-chatbot-setting/alert",
+              "whatsapp-chatbot-setting/api_key",
+              "whatsapp-chatbot-setting/whatsapp_profile",
+              "whatsapp-chatbot-setting/ai_setting"
+            ]
+          },
+          {
+            "group": "Telegram Chatbot Settings",
+            "pages": [
+              "telegram-chatbot-setting/general",
+              "telegram-chatbot-setting/telegram_profile",
+              "telegram-chatbot-setting/ai_setting"
+            ]
+          },
+          {
+            "group": "Instagram Chatbot Settings",
+            "pages": [
+              "instagram-chatbot-setting/general",
+              "instagram-chatbot-setting/ai_setting"
+            ]
+          },
+          {
+            "group": "Facebook Chatbot Settings",
+            "pages": [
+              "facebook-chatbot-setting/general",
+              "facebook-chatbot-setting/ai_setting"
+            ]
+          },
+          {
+            "group": "Configuring Chatbot Scenarios",
+            "pages": [
+              "configure-persona/config_chatbot_scenari"
+            ]
+          },
+          {
+            "group": "3rd Party Apps Integrations",
+            "pages": [
+              "3-party-integration/chatgpt",
+              "3-party-integration/acuity_scheduling",
+              "3-party-integration/microsoft_teams",
+              "3-party-integration/woocommerce",
+              "3-party-integration/autopilot",
+              "3-party-integration/firmaocrm",
+              "3-party-integration/capsulecrm",
+              "3-party-integration/facebook_pixel",
+              "3-party-integration/eleviocrm",
+              "3-party-integration/clossecrm",
+              "3-party-integration/calendarherocrm",
+              "3-party-integration/extraaedgecrm",
+              "3-party-integration/infobipcrm",
+              "3-party-integration/googlesheet",
+              "3-party-integration/googlecalendar",
+              "3-party-integration/googletask",
+              "3-party-integration/googlegemini",
+              "3-party-integration/googletagmanager",
+              "3-party-integration/helpshiftcrm",
+              "3-party-integration/zendeskcrm",
+              "3-party-integration/leadsquaredcrm",
+              "3-party-integration/zohodesk",
+              "3-party-integration/supportbeecrm",
+              "3-party-integration/wealthboxcrm",
+              "3-party-integration/brevo",
+              "3-party-integration/apptivo",
+              "3-party-integration/freshdesk",
+              "3-party-integration/helpdeskcrm",
+              "3-party-integration/jiracrm",
+              "3-party-integration/karmacrm",
+              "3-party-integration/liveagentcrm",
+              "3-party-integration/nethuntcrm",
+              "3-party-integration/plivocrm",
+              "3-party-integration/recurlycrm",
+              "3-party-integration/shipwaycrm",
+              "3-party-integration/teamgatecrm",
+              "3-party-integration/zohoprojects",
+              "3-party-integration/zohocrm",
+              "3-party-integration/googledrive",
+              "3-party-integration/agilecrm",
+              "3-party-integration/pipedrive",
+              "3-party-integration/dripcrm",
+              "3-party-integration/getresponse",
+              "3-party-integration/groove",
+              "3-party-integration/helpdocs",
+              "3-party-integration/bitrix24",
+              "3-party-integration/freshwordscrm",
+              "3-party-integration/insightlycrm",
+              "3-party-integration/nimblecrm",
+              "3-party-integration/nutshellcrm",
+              "3-party-integration/ontraport",
+              "3-party-integration/hubspot",
+              "3-party-integration/webhopper",
+              "3-party-integration/engagebay",
+              "3-party-integration/frontapp",
+              "3-party-integration/coppercrm",
+              "3-party-integration/salesflare",
+              "3-party-integration/nocrm",
+              "3-party-integration/helprace",
+              "3-party-integration/flowlu",
+              "3-party-integration/pipeline",
+              "3-party-integration/zingtre",
+              "3-party-integration/salesforcecrm",
+              "3-party-integration/chakracrm",
+              "3-party-integration/simplybook",
+              "3-party-integration/gitbook",
+              "3-party-integration/gohighlevel",
+              "3-party-integration/voxloud",
+              "3-party-integration/viasocket",
+              "3-party-integration/twilio",
+              "3-party-integration/shopify",
+              "3-party-integration/razorpay",
+              "3-party-integration/pabbly",
+              "3-party-integration/outlook",
+              "3-party-integration/onpipeline",
+              "3-party-integration/notion",
+              "3-party-integration/moengage",
+              "3-party-integration/kylascrm",
+              "3-party-integration/googleanalytics",
+              "3-party-integration/firstpromotor",
+              "3-party-integration/googlecontact",
+              "3-party-integration/zapier",
+              "3-party-integration/makecom"
+            ]
+          },
+           {
+            "group": "Inbox",
+            "pages": [
+              "inbox/chats_window",
+              "inbox/orders",
+              "inbox/contacts",
+              "inbox/groups",
+              "inbox/real_time_customer_interaction"
+            ]
+          },
+          {
+            "group": "Analytics",
+            "pages": [
+              "analytics/use_analytics"
+            ]
+          },
+          {
+            "group": "Teams",
+            "pages": [
+              "teams/dept",
+              "teams/business_hour",
+              "teams/team",
+              "teams/role",
+              "teams/using_team"
+              
+            ]
+          },
+          {
+            "group": "Developer",
+            "pages": [
+              "developer/3_party_app_api",
+              "developer/api_access_token",
+              "developer/webhook"
+            ]
+          },
+          {
+            "group": "Settings",
+            "pages": [
+              "settings/custom_attribute",
+              "settings/tags",
+              "settings/custom_status",
+              "settings/quick_replies",
+              "settings/custom_tabs"
+            ]
+          },
+          {
+            "group": "My Account",
+            "pages": [
+              "my-account/account",
+              "my-account/password"
+            ]
+          },
+          {
+            "group" : "Suscription and Plans",
+            "pages" : [
+              "subscription-plan/legacy",
+              "subscription-plan/latest"
+            ]
+          },
+          {
+            "group": "Frequently Asked Questions (FAQs)",
+            "pages": [
+              "faqs/onboarding_faqs",
+              "faqs/edit_chat_flow",
+              "faqs/bot_installation",
+              "faqs/inbox_faq",
+              "faqs/profile_team_notificcation",
+              "faqs/analytics",
+              "faqs/chat_flow",
+              "faqs/bot_setting",
+              "faqs/whatsapp",
+              "faqs/subscription",
+              "faqs/product_update",
+              "faqs/chatgpt",
+              "faqs/common_err_troubleshoot"
             ]
           }
         ]
       },
-      {
-        "tab": "API reference",
+       {
+        "tab": "Platform Guidelines & Training",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "WhatsApp Cloud API by Meta",
             "pages": [
-              "api-reference/introduction"
+              "whatsapp-cloud-api-by-meta/setting_facebook_business_manager",
+              "whatsapp-cloud-api-by-meta/meta_conversation_pricing",
+              "whatsapp-cloud-api-by-meta/update_whatsapp_bot_profile",
+              "whatsapp-cloud-api-by-meta/getting_blue_tick"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "WhatsApp Bot Creation with Manual Onboarding",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "whatsapp-bot-creation/prerequisites",
+              "whatsapp-bot-creation/create_meta_app",
+              "whatsapp-bot-creation/register_verify_number",
+              "whatsapp-bot-creation/subscribe_wa_webhook",
+              "whatsapp-bot-creation/update_payment_method",
+              "whatsapp-bot-creation/assign_system_user",
+              "whatsapp-bot-creation/getting_necessary_details"
+            ]
+          },
+           {
+            "group": "WhatsApp And Meta",
+            "pages": [
+              "whatsapp-meta/bot_creation_with_automation",
+              "whatsapp-meta/migration_of_account",
+              "whatsapp-meta/reconnect_bot",
+              "whatsapp-meta/recover_restricted_account"
+            ]
+          },
+          {
+            "group": "Must Know How Of Convertalk",
+            "pages": [
+              "must-know-how-of-Convertalk/manage_use_custom_attributes",
+              "must-know-how-of-Convertalk/call_external_api",
+              "must-know-how-of-Convertalk/managing_team_roles",
+              "must-know-how-of-Convertalk/unlocking_botpenguin_ai",
+              "must-know-how-of-Convertalk/support_agent_guide",
+              "must-know-how-of-Convertalk/whatsapp_notification",
+              "must-know-how-of-Convertalk/chatbot_user_authentication"
+            ]
+          }
+          
+        ]
+      },
+       {
+        "tab": "Platform Updates & Info",
+        "groups": [
+          {
+            "group": "What's New",
+            "pages": [
+              "what-new/latest_updates"
+            ]
+          },
+          {
+            "group": "Report A Bug!",
+            "pages": [
+              "report-bug/bug_submission"
+            ]
+          },
+          {
+            "group": "Feature Requests",
+            "pages": [
+              "feature-request/request_tracker"
+            ]
+          },
+          {
+            "group": "Convertalk Roadmap",
+            "pages": [
+              "Convertalk-roadmap/development_timeline"
+            ]
+          },
+          {
+            "group": "Connect With Us",
+            "pages": [
+              "connect-with-us/community_hub"
+            ]
+          }
+        ]
+      },
+       {
+        "tab": "API References",
+        "groups": [
+          {
+            "group": "Contact & Chats APIs",
+            "pages": [
+              "contact-chat/get_all_contact",
+              "contact-chat/getting_group_segment",
+              "contact-chat/add_whatsapp_contact",
+              "contact-chat/delete_whatsapp_contact",
+              "contact-chat/website_data_metadata"
+            ]
+          },
+          {
+            "group": "WhatsApp Cloud API",
+            "pages": [
+              "whatsapp-cloud-api/get_template_list",
+              "whatsapp-cloud-api/whatsapp_template",
+              "whatsapp-cloud-api/post_send_template_message"
             ]
           }
         ]
       }
+     
     ],
     "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
     }
   },
+  "favicon": "ConvertalkLogo.png",
+
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/Light_and_Dark_Convertalk.png",
+    "dark": "/logo/Light_and_Dark_Convertalk.png"
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:info@convertalk.com"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "href": "https://bot.convertalk.com"
     }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
   },
   "footer": {
     "socials": {
