@@ -277,7 +277,6 @@
             "group": "Frequently Asked Questions (FAQs)",
             "pages": [
               "faqs/onboarding_faqs",
-              "faqs/edit_chat_flow",
               "faqs/bot_installation",
               "faqs/inbox_faq",
               "faqs/profile_team_notificcation",
@@ -286,7 +285,6 @@
               "faqs/bot_setting",
               "faqs/whatsapp",
               "faqs/subscription",
-              "faqs/product_update",
               "faqs/chatgpt",
               "faqs/common_err_troubleshoot"
             ]
